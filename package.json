@@ -1,0 +1,28 @@
+{
+  "name": "contacts-graphql",
+  "version": "0.0.1",
+  "description": "📕 An API to manage contacts using GraphQL and Typescript",
+  "main": "src/index.ts",
+  "repository": "https://github.com/luisfelipesdn12/contacts-graphql",
+  "author": "Luis Felipe <luisfelipesdn12@gmail.com> (https://luisfelipesdn12.now.sh/)",
+  "license": "GPL-3.0",
+  "scripts": {
+    "dev": "nodemon -w src --ext ts --exec ts-node src/index.ts",
+    "start": "ts-node src/index.ts"
+  },
+  "dependencies": {
+    "@types/uuid": "^8.3.0",
+    "apollo-server": "^2.19.2",
+    "class-validator": "^0.13.1",
+    "install": "^0.13.0",
+    "lowdb": "^1.0.0",
+    "reflect-metadata": "^0.1.13",
+    "type-graphql": "^1.1.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.3"
+  }
+}
