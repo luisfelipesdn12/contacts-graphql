@@ -1,4 +1,4 @@
-# contacts-graphql
+# `contacts-graphql`
 📕 An API to manage contacts using GraphQL and Typescript
 
 ## 📖 About
@@ -26,7 +26,7 @@ npm run start
 It should result in a log in the terminal saying which port you should access. For default, it may be http://localhost:6060/
 
 ## 💻 Technologies
-Were used TypeScript and NodeJS with the following dependencies:
+Used TypeScript & NodeJS with the following dependencies:
 
 - [**apollo-server**](https://github.com/apollographql/apollo-server) - To handle the GraphQL requests.
 - [**lowdb**](https://github.com/typicode/lowdb) - Small local JSON database to store the contacts.
