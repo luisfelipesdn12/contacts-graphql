@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 6060;
 
 async function main() {
     const schema = await buildSchema({ resolvers: [ContactResolver] });
-    const server = new ApolloServer({ schema });
+    const server = new ApolloServer({ schema, playground: true });
     await server.listen(PORT);
     console.log(`Linstening to ${PORT}!`);
 }
