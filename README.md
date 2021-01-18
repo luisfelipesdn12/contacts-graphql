@@ -32,3 +32,59 @@ Used TypeScript & NodeJS with the following dependencies:
 - [**lowdb**](https://github.com/typicode/lowdb) - Small local JSON database to store the contacts.
 - [**type-graphql**](https://typegraphql.com/) - Used to generate GraphQL schema and resolvers.
 - [**uuid**](https://github.com/uuidjs/uuid) - Generates IDs for contacts.
+
+## 👀 Example
+### Creating a contact
+```graphql
+mutation {
+  createContact(
+    data: {
+      name: "Luis Felipe Santos do Nascimento"
+      phone: "+55 11 90000-0000"
+      email: "luisfelipesdn12@gmail.com"
+      website: "https://luisfelipesdn12.now.sh"
+      notes: "It's me :)"
+    }
+  ) {
+    id
+  }
+}
+```
+
+#### Return
+```graphql
+{
+  "data": {
+    "createContact": {
+      "id": "ab2d6337-afa6-414d-be2b-ccca51c08a43"
+    }
+  }
+}
+```
+
+### Getting all contacts
+```graphql
+query {
+  contacts {
+    ...contactFields
+  }
+}
+```
+
+#### Return
+```graphql
+{
+  "data": {
+    "contacts": [
+      {
+        "id": "ab2d6337-afa6-414d-be2b-ccca51c08a43",
+        "name": "Luis Felipe Santos do Nascimento",
+        "phone": "+55 11 90000-0000",
+        "email": "luisfelipesdn12@gmail.com",
+        "website": "https://luisfelipesdn12.now.sh",
+        "notes": "It's me :)"
+      }
+    ]
+  }
+}
+```
