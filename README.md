@@ -34,7 +34,7 @@ Used TypeScript & NodeJS with the following dependencies:
 - [**uuid**](https://github.com/uuidjs/uuid) - Generates IDs for contacts.
 
 ## 👀 Example
-### Creating a contact
+### Creating a contact (`createContact`)
 <details>
 
 ```graphql
@@ -65,7 +65,34 @@ mutation {
 ```
 </details>
 
-### Getting all contacts
+### Getting a contact (`contact`)
+<details>
+
+```graphql
+query {
+	contact(id: "ab2d6337-afa6-414d-be2b-ccca51c08a43") {
+    name
+    website
+    notes
+  }
+}
+```
+
+#### Return
+```json
+{
+  "data": {
+    "contact": {
+      "name": "Luis Felipe Santos do Nascimento",
+      "website": "https://luisfelipesdn12.now.sh",
+      "notes": "It's me :)"
+    }
+  }
+}
+```
+</details>
+
+### Getting all contacts (´contacts´)
 <details>
 
 ```graphql
@@ -95,7 +122,7 @@ query {
 ```
 </details>
 
-### Updating a contact
+### Updating a contact (`updateContact`)
 <details>
 
 ```graphql
@@ -128,7 +155,7 @@ mutation {
 ```
 </details>
 
-### Deleting a contact
+### Deleting a contact (`deleteContact`)
 <details>
 
 ```graphql
