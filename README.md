@@ -92,7 +92,7 @@ query {
 ```
 </details>
 
-### Getting all contacts (´contacts´)
+### Getting all contacts (`contacts`)
 <details>
 
 ```graphql
