@@ -35,6 +35,8 @@ Used TypeScript & NodeJS with the following dependencies:
 
 ## 👀 Example
 ### Creating a contact
+<details>
+
 ```graphql
 mutation {
   createContact(
@@ -61,8 +63,11 @@ mutation {
   }
 }
 ```
+</details>
 
 ### Getting all contacts
+<details>
+
 ```graphql
 query {
   contacts {
@@ -88,3 +93,56 @@ query {
   }
 }
 ```
+</details>
+
+### Updating a contact
+<details>
+
+```graphql
+mutation {
+  updateContact(
+    id: "ab2d6337-afa6-414d-be2b-ccca51c08a43"
+    data: {
+      website: "https://github.com/luisfelipesdn12/"
+    }
+  ) {
+    ...contactFields
+  }
+}
+```
+
+#### Return
+```graphql
+{
+  "data": {
+    "updateContact": {
+      "id": "ab2d6337-afa6-414d-be2b-ccca51c08a43",
+      "name": "Luis Felipe Santos do Nascimento",
+      "phone": "+55 11 90000-0000",
+      "email": "luisfelipesdn12@gmail.com",
+      "website": "https://github.com/luisfelipesdn12/",
+      "notes": "It's me :)"
+    }
+  }
+}
+```
+</details>
+
+### Deleting a contact
+<details>
+
+```graphql
+mutation {
+  deleteContact(id: "ab2d6337-afa6-414d-be2b-ccca51c08a43")
+}
+```
+
+#### Return
+```graphql
+{
+  "data": {
+    "deleteContact": true
+  }
+}
+```
+</details>
