@@ -54,7 +54,7 @@ mutation {
 ```
 
 #### Return
-```graphql
+```json
 {
   "data": {
     "createContact": {
@@ -77,7 +77,7 @@ query {
 ```
 
 #### Return
-```graphql
+```json
 {
   "data": {
     "contacts": [
@@ -112,7 +112,7 @@ mutation {
 ```
 
 #### Return
-```graphql
+```json
 {
   "data": {
     "updateContact": {
@@ -138,7 +138,7 @@ mutation {
 ```
 
 #### Return
-```graphql
+```json
 {
   "data": {
     "deleteContact": true
