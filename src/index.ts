@@ -10,7 +10,7 @@ async function main() {
     const schema = await buildSchema({ resolvers: [ContactResolver] });
     const server = new ApolloServer({ schema, playground: true, introspection: true });
     await server.listen(PORT);
-    console.log(`Linstening to ${PORT}!`);
+    console.log(`Linstening to http://localhost:${PORT}!`);
 }
 
 main();
